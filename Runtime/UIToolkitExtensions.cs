@@ -73,9 +73,6 @@ namespace UnityEssentials
             return element;
         }
 
-        public static void AddStyleSheet(this VisualElement element, StyleSheet styleSheet) =>
-            element.styleSheets.Add(styleSheet);
-
         public static void AddStyleSheet(this UIDocument document, StyleSheet styleSheet) =>
             document.rootVisualElement.styleSheets.Add(styleSheet);
     }
