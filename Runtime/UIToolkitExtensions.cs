@@ -32,8 +32,10 @@ namespace UnityEssentials
 
         // Color
         public static void SetColor(this VisualElement element, Color color) => element.style.color = color;
+        public static Color SetColorAlpha(this Color color, float alpha) => new Color(color.r, color.g, color.b, alpha);
         public static Color GetColor(this VisualElement element) => element.resolvedStyle.color;
-        public static void SetBackgroundColor(this VisualElement element, Color color) => element.style.backgroundColor = color;
+        public static void SetBackgroundColor(this VisualElement element, Color color) => element.style.backgroundColor = color.SetColorAlpha(1);
+        public static void SetBackgroundColorWithAlpha(this VisualElement element, Color color) => element.style.backgroundColor = color;
         public static Color GetBackgroundColor(this VisualElement element) => element.resolvedStyle.backgroundColor;
 
         // Image
