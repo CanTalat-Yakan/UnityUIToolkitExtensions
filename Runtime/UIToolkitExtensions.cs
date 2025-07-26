@@ -53,5 +53,7 @@ namespace UnityEssentials
         // Display
         public static void SetDisplayEnabled(this VisualElement element, bool enabled) => element.style.display = enabled ? DisplayStyle.Flex : DisplayStyle.None;
         public static bool GetDisplayEnabled(this VisualElement element) => element.resolvedStyle.display != DisplayStyle.None;
+        public static void SetVisibility(this VisualElement element, bool visible) => element.style.visibility = visible ? Visibility.Visible : Visibility.Hidden;
+        public static Visibility GetVisibility(this VisualElement element) => element.resolvedStyle.visibility;
     }
 }
